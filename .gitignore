@@ -1,0 +1,3 @@
+/target/stale/extract-native.dependencies
+/.lein-repl-history
+/target/stale/extract-native.dependency
