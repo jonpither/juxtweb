@@ -17,4 +17,5 @@
   :dependencies [[org.clojure/clojure "1.5.1"]]
 
   :up {:plugins {[up/up-logging "0.0.1"] nil
-                 [up/up-http "0.0.1"] {:port 8787}}})
+                 [up/up-http "0.0.1"] {:port 8787}
+                 [up/up-nrepl "0.0.1"] {:port 6011}}})
