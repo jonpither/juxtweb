@@ -19,7 +19,7 @@
   :dependencies [[org.clojure/clojure "1.5.1"]]
 
   :up {:plugins {[up/up-logging ~(versions :up)] nil
-                 [up/up-http ~(versions :up)] {:port 8787}
+                 [up/up-http ~(versions :up)] {:port 8080}
                  [up/up-nrepl ~(versions :up)] {:port 6011}
                  [up/up-pedestal-webapp ~(versions :up)] {:handler pro.juxt.website/index}
                  }})
