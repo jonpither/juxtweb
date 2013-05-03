@@ -11,11 +11,15 @@
             (let [[[_ stem lst]] (re-seq #"(.*\.)(.*)" tag)]
               (join [stem (inc (read-string lst)) "-" "SNAPSHOT"])))))))
 
+(def versions {:up "0.0.1"})
+
 (defproject pro.juxt/juxtweb version
 ;;  :eval-in :classloader
-  :plugins [[lein-up "0.0.1"]]
+  :plugins [[lein-up ~(versions :up)]]
   :dependencies [[org.clojure/clojure "1.5.1"]]
 
-  :up {:plugins {[up/up-logging "0.0.1"] nil
-                 [up/up-http "0.0.1"] {:port 8787}
-                 [up/up-nrepl "0.0.1"] {:port 6011}}})
+  :up {:plugins {[up/up-logging ~(versions :up)] nil
+                 [up/up-http ~(versions :up)] {:port 8787}
+                 [up/up-nrepl ~(versions :up)] {:port 6011}
+                 [up/up-pedestal-webapp ~(versions :up)] {:handler pro.juxt.website/index}
+                 }})
