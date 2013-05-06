@@ -6,4 +6,4 @@
 (defn index [req]
   {:status 200 
    :headers {"Content-Type" "text/html"} 
-   :body (stencil/render-file "page.html" {:title "test title"})})
+   :body (stencil/render-file "home.html" {})})
