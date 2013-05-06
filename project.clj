@@ -16,10 +16,14 @@
 (defproject pro.juxt/juxtweb version
 ;;  :eval-in :classloader
   :plugins [[lein-up ~(versions :up)]]
-  :dependencies [[org.clojure/clojure "1.5.1"]]
+  :dependencies [[org.clojure/clojure "1.5.1"]
+                 [stencil "0.3.2"]
+                 ]
 
   :up {:plugins {[up/up-logging ~(versions :up)] nil
                  [up/up-http ~(versions :up)] {:port 8080}
                  [up/up-nrepl ~(versions :up)] {:port 6011}
                  [up/up-pedestal-webapp ~(versions :up)] {:handler pro.juxt.website/index}
+                 [up/up-watch ~(versions :up)] {:patterns ["resources" [["*.mustache"]]]}
+                 [up/up-stencil ~(versions :up)] nil
                  }})
