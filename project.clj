@@ -3,11 +3,11 @@
          '(clojure.java [shell :refer (sh)]))
 
 (def version
-  (let [{:keys [exit out err]} (sh "git" "describe" "--tags" "--long")] 
+  (let [{:keys [exit out err]} (sh "git" "describe" "--tags" "--long")]
     (if (= 128 exit) "0.0.1"
         (let [[[_ tag commits hash]] (re-seq #"(.*)-(.*)-(.*)" out)]
-          (if (zero? (edn/read-string commits)) 
-            tag 
+          (if (zero? (edn/read-string commits))
+            tag
             (let [[[_ stem lst]] (re-seq #"(.*\.)(.*)" tag)]
               (join [stem (inc (read-string lst)) "-" "SNAPSHOT"])))))))
 
@@ -17,13 +17,14 @@
 ;;  :eval-in :classloader
   :plugins [[lein-up ~(versions :up)]]
   :dependencies [[org.clojure/clojure "1.5.1"]
-                 [stencil "0.3.2"]
                  ]
 
-  :up {:plugins {[up/up-logging ~(versions :up)] nil
+  :up {:plugins {[up/up-firefox-reload ~(versions :up)] {:host "nessa"}
+                 [up/up-logging ~(versions :up)] nil
                  [up/up-http ~(versions :up)] {:port 8080}
                  [up/up-nrepl ~(versions :up)] {:port 6011}
                  [up/up-pedestal-webapp ~(versions :up)] {:handler pro.juxt.website/index}
                  [up/up-watch ~(versions :up)] {:patterns ["resources" [["*.mustache"]]]}
                  [up/up-stencil ~(versions :up)] nil
+
                  }})
