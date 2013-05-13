@@ -16,13 +16,9 @@
 (defproject pro.juxt/juxtweb version
   :plugins [[lein-up ~(versions :up)]]
   :dependencies [[org.clojure/clojure "1.5.1"]
-                 ;; Only while developing endophile, otherwise uncomment [endophile "0.1.0"] and remove the rest
-                 ;; [endophile "0.1.0"]
-                 [enlive "1.1.1"]
-                 [org.pegdown/pegdown "1.2.0"]
-                 ]
+                 [endophile "0.1.0"]]
 
-  :source-paths ["src" "/home/malcolm/src/endophile/src"] ; only while developing endophile
+  :source-paths ["src"]
 
   :up {:plugin pro.juxt.website/WebApplication
        :plugins {[up/up-firefox-reload ~(versions :up)] {:host "nessa"}
