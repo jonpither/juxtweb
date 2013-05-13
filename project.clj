@@ -14,17 +14,22 @@
 (def versions {:up "0.0.1"})
 
 (defproject pro.juxt/juxtweb version
-;;  :eval-in :classloader
   :plugins [[lein-up ~(versions :up)]]
   :dependencies [[org.clojure/clojure "1.5.1"]
+                 ;; Only while developing endophile, otherwise uncomment [endophile "0.1.0"] and remove the rest
+                 ;; [endophile "0.1.0"]
+                 [enlive "1.1.1"]
+                 [org.pegdown/pegdown "1.2.0"]
                  ]
 
-  :up {:plugins {[up/up-firefox-reload ~(versions :up)] {:host "nessa"}
+  :source-paths ["src" "/home/malcolm/src/endophile/src"] ; only while developing endophile
+
+  :up {:plugin pro.juxt.website/WebApplication
+       :plugins {[up/up-firefox-reload ~(versions :up)] {:host "nessa"}
                  [up/up-logging ~(versions :up)] nil
                  [up/up-http ~(versions :up)] {:port 8080}
                  [up/up-nrepl ~(versions :up)] {:port 6011}
-                 [up/up-pedestal-webapp ~(versions :up)] {:handler pro.juxt.website/index}
-                 [up/up-watch ~(versions :up)] {:patterns ["resources" [["*.mustache"]]]}
+                 [up/up-pedestal-webapp ~(versions :up)] {:handler pro.juxt.website/handler}
+                 [up/up-watch ~(versions :up)] {:patterns ["resources" ["*.mustache"] ["*.md"]]}
                  [up/up-stencil ~(versions :up)] nil
-
                  }})

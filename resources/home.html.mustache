@@ -10,7 +10,7 @@
     <link href="css/bootstrap.min.css" rel="stylesheet" media="screen"/>
     <link href="css/bootstrap-responsive.min.css" rel="stylesheet" media="screen"/>
     <link rel="stylesheet" href="css/juxt.css"/>
-    <link href='https://fonts.googleapis.com/css?family=Monda:400,700' rel='stylesheet' type='text/css'>
+<!--    <link href='https://fonts.googleapis.com/css?family=Monda:400,700' rel='stylesheet' type='text/css'> -->
   </head>
   <body>
     <div id="wrapper">
@@ -43,42 +43,23 @@
           <hr class="row-divider"/>
           <div class="row-fluid">
             <div class="span6">
-
-              <p><b style="font-size: 140%">JUXT</b> is a network of experienced IT professionals who specialise in the Clojure programming language.
-
-              <p>We have particular expertise in:
-              <ul>
-                <li>Introducing Clojure to large institutions
-                <li>Building robust systems in Clojure
-                <li>Training and coaching developers in the Clojure language.
-              </ul>
-              <p>Based in London, UK, and aiming to grow our network of professionals across Europe and beyond.</p>
+              {{#markdown}}intro.md{{/markdown}}
 	    </div>
 
 	    <div class="span6">
-
-              <p>If you want to find out more, why not meet us in London
-              for a coffee and a chat.</p>
-
-              <p><span class="lsf-icon" title="phone"></span>Call Malcolm on 07720538719 or Jon on 07773351861</p>
-
-              <p><span class="lsf-icon" title="twitter"></span>You can also follow us on Twitter: @malcolmsparks @jonpither</p>
-
-              <p><span class="lsf-icon" title="mail"></span>Or you can write to us: <a href="mailto:malcolm@juxt.pro">malcolm@juxt.pro</a> or <a href="mailto:jon@juxt.pro">jon@juxt.pro</a></p>
+              {{#markdown}}contact.md{{/markdown}}
 	    </div>
-
           </div>
+
           <hr class="row-divider"/>
-<div class="row-fluid">
+
+          <div class="row-fluid">
             <div class="span4">
               <div class="service">
                 <div class="service-icon">
                   <span class="lsf-icon" title="pencil"></span>
                 </div>
-                <h4>Training</h4>
-                <p>We provide 2-day training courses giving quick
-                working knowledge of the fundamentals of the Clojure
-                language.</p>
+                {{#markdown}}training.md{{/markdown}}
               </div>
 	    </div>
             <div class="span4">
@@ -86,11 +67,7 @@
                 <div class="service-icon">
                   <span class="lsf-icon" title="gear"></span>
                 </div>
-                <h4>Consulting</h4>
-                <p>We can provide help in showing you how to get the
-                most of our functional programming (and Clojure in
-                particular) in your architecture, programme or
-                project.</p>
+                {{#markdown}}consulting.md{{/markdown}}
               </div>
 	    </div>
             <div class="span4">
@@ -98,11 +75,7 @@
                 <div class="service-icon">
                   <span class="lsf-icon" title="arrowright"></span>
                 </div>
-                <h4>Speaking</h4>
-                <p>If you are thinking about using Clojure in your
-                organisation, ask us to give a talk to your colleagues
-                about our experiences adopting Clojure in a commercial
-                setting.</p>
+                {{#markdown}}speaking.md{{/markdown}}
               </div>
 	    </div>
           </div>
