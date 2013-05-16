@@ -10,13 +10,17 @@
    [clojure.xml :refer (emit-element)])
   (:import (up.start Plugin)))
 
+(defn markdown [content]
+  (->> content resource slurp mp to-clj (map emit-element) dorun with-out-str))
 
-(defn handler [req]
-  {:status 200
-   :headers {"Content-Type" "text/html"}
-   :body (stencil/render-file "home.html"
-                              {:intro (with-out-str (dorun (map emit-element (to-clj (mp (slurp (resource "intro.md")))))))
-                               :markdown (fn [content] (->> content resource slurp mp to-clj (map emit-element) dorun with-out-str))})})
+(defn index-handler [req]
+  (let [pagename (get-in req [:params :pagename])]
+    {:status 200
+     :headers {"Content-Type" "text/html"}
+     :body (stencil/render-file "page.html"
+                                {:markdown markdown
+                                 :content (fn [] 
+                                            (stencil/render-file "home.html" {:markdown markdown}))})}))
 
 (defn ->index [req] (redirect "/index.html"))
 
@@ -27,4 +31,4 @@
       (enqueue bus {:up/topic :up.http/add-webapp
                     :routes [:juxtweb
                              ["/" {:get 'pro.juxt.website/->index}]
-                             ["/index.html" {:get 'pro.juxt.website/handler}]]}))))
+                             ["/index.html" {:get 'pro.juxt.website/index-handler}]]}))))

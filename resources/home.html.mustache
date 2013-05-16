@@ -1,100 +1,53 @@
-<!DOCTYPE html>
-<html prefix="dc: http://purl.org/dc/elements/1.1/" lang="en">
-  <head>
-    <title>JUXT</title>
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta property="dc:language" content="en"/>
-    <meta property="dc:title" content="JUXT"/>
-    <meta property="dc:description" content="Juxt is a Clojure services company based in London."/>
-    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen"/>
-    <link href="css/bootstrap-responsive.min.css" rel="stylesheet" media="screen"/>
-    <link rel="stylesheet" href="css/juxt.css"/>
-<!--    <link href='https://fonts.googleapis.com/css?family=Monda:400,700' rel='stylesheet' type='text/css'> -->
-  </head>
-  <body>
-    <div id="wrapper">
-      <div class="container-fluid">
-	<div class="navbar">
-	  <div class="navbar-inner navbar-inverse" style="border:none">
-	    <div class="pull-right">
-	      <ul class="nav">
-		<li class="active"><a href="index.html">Home</a></li>
+<div id="header">
+  <div class="container-fluid">
+    <h1 id="title">
+      <span style="font-size: 200%">JUXT</span>
+    </h1>
+  </div> <!-- /container -->
+</div> <!-- /header -->
 
-	      </ul>
-	    </div>
-	  </div>
-	</div>
-      </div> <!-- /container -->
-      <div id="header">
-	<div class="container-fluid">
-	  <h1 id="title">
-            <span style="font-size: 200%">JUXT</span>
-	  </h1>
-	</div> <!-- /container -->
-      </div> <!-- /header -->
-      <div id="content">
-        <div class="container-fluid">
-          <div class="row-fluid">
-            <div class="span11">
-              <h4><i>Software practitioners using Clojure to solve complex business problems</i></h4>
-            </div>
-          </div>
-          <hr class="row-divider"/>
-          <div class="row-fluid">
-            <div class="span6">
-              {{#markdown}}intro.md{{/markdown}}
-	    </div>
-
-	    <div class="span6">
-              {{#markdown}}contact.md{{/markdown}}
-	    </div>
-          </div>
-
-          <hr class="row-divider"/>
-
-          <div class="row-fluid">
-            <div class="span4">
-              <div class="service">
-                <div class="service-icon">
-                  <span class="lsf-icon" title="pencil"></span>
-                </div>
-                {{#markdown}}training.md{{/markdown}}
-              </div>
-	    </div>
-            <div class="span4">
-              <div class="service">
-                <div class="service-icon">
-                  <span class="lsf-icon" title="gear"></span>
-                </div>
-                {{#markdown}}consulting.md{{/markdown}}
-              </div>
-	    </div>
-            <div class="span4">
-              <div class="service">
-                <div class="service-icon">
-                  <span class="lsf-icon" title="arrowright"></span>
-                </div>
-                {{#markdown}}speaking.md{{/markdown}}
-              </div>
-	    </div>
-          </div>
-	</div>
+<div id="content">
+  <div class="container-fluid">
+    <div class="row-fluid">
+      <div class="span11">
+        <h4><i>Software practitioners using Clojure to solve complex business problems</i></h4>
       </div>
-      <div id="footer">
-        <div class="container-fluid">
-&copy; JUXT 2013
-          <div class="row-fluid">
-            <div class="span3">
-	      <a href="http://twitter.com/malcolmsparks" class="lsf-icon" title="twitter">malcolmsparks</a>
-	      <a href="http://twitter.com/jonpither" class="lsf-icon" title="twitter">jonpither</a>
-            </div>
+    </div>
+    <hr class="row-divider"/>
+    <div class="row-fluid">
+      <div class="span6">
+        {{#markdown}}intro.md{{/markdown}}
+      </div>
+      <div class="span6">
+        {{#markdown}}contact.md{{/markdown}}
+      </div>
+    </div>
+
+    <div class="row-fluid">
+      <div class="span4">
+        <div class="service">
+          <div class="service-icon">
+            <span class="lsf-icon" title="pencil"></span>
           </div>
+          {{#markdown}}training.md{{/markdown}}
+        </div>
+      </div>
+      <div class="span4">
+        <div class="service">
+          <div class="service-icon">
+            <span class="lsf-icon" title="gear"></span>
+          </div>
+          {{#markdown}}consulting.md{{/markdown}}
+        </div>
+      </div>
+      <div class="span4">
+        <div class="service">
+          <div class="service-icon">
+            <span class="lsf-icon" title="arrowright"></span>
+          </div>
+          {{#markdown}}speaking.md{{/markdown}}
         </div>
       </div>
     </div>
-    <script src="js/jquery-1.8.3.min.js"></script>
-    <script src="js/jquery.backstretch.min.js"></script>
-    <script src="js/juxt.js"></script>
-  </body>
-</html>
+  </div>
+</div>
