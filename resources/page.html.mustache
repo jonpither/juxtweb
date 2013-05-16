@@ -13,10 +13,11 @@
 <!--    <link href='https://fonts.googleapis.com/css?family=Monda:400,700' rel='stylesheet' type='text/css'> -->
   </head>
   <body>
-    <div id="wrapper">
-      <div class="container-fluid">
+<!---    <div id="wrapper"> -->
+
 	<div class="navbar">
 	  <div class="navbar-inner navbar-inverse" style="border:none">
+          <div class="wrap">
 	    <div class="pull-right">
 	      <ul class="nav">
 		<li class="active"><a href="index.html">Home</a></li>
@@ -28,11 +29,13 @@
 	      </ul>
 	    </div>
 	  </div>
+          </div>
 	</div>
-      </div> <!-- /container -->
+
       {{{content}}}
+
       <div id="footer">
-        <div class="container-fluid">
+        <div class="container-fluid wrap">
 &copy; JUXT 2013
           <div class="row-fluid">
             <div class="span3">
@@ -42,7 +45,10 @@
           </div>
         </div>
       </div>
+<!--
     </div>
+-->
+
     <script src="js/jquery-1.8.3.min.js"></script>
     <script src="js/jquery.backstretch.min.js"></script>
     <script src="js/juxt.js"></script>

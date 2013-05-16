@@ -1,4 +1,4 @@
-If you want to find out more, why not meet us in London for a coffee and a chat.
+We welcome unsolicted e-mails, phone calls and tweets.
 
 <span class="lsf-icon" title="phone"/>Call Malcolm on 07720538719 or Jon on 07773351861
 
