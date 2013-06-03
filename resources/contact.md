@@ -1,3 +1,5 @@
+### Get in touch
+
 We welcome unsolicted e-mails, phone calls and tweets.
 
 <span class="lsf-icon" title="phone"/>Call Malcolm on 07720538719 or Jon on 07773351861

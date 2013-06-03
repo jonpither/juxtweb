@@ -14,12 +14,16 @@
   </div>
 </div>
 
-  <hr class="row-divider"/>
+<hr class="row-divider"/>
 
-  <div class="container-fluid wrap">
+<div class="container-fluid wrap">
   <div class="row-fluid">
-    <div class="span11">
+    <div class="span6">
       {{#markdown}}intro.md{{/markdown}}
+      {{#markdown}}contact.md{{/markdown}}
+    </div>
+    <div class="span6">
+      {{#markdown}}news.md{{/markdown}}
     </div>
   </div>
 </div>
@@ -29,25 +33,31 @@
   <div class="row-fluid">
     <div class="span4">
       <div class="service">
+<!--
         <div class="service-icon">
-          <span class="lsf-icon" title="pencil"></span>
+          <span class="service-icon lsf-icon" title="pencil"></span>
         </div>
+-->
         {{#markdown}}training.md{{/markdown}}
       </div>
     </div>
     <div class="span4">
       <div class="service">
+<!--
         <div class="service-icon">
           <span class="lsf-icon" title="gear"></span>
         </div>
+-->
         {{#markdown}}consulting.md{{/markdown}}
       </div>
     </div>
     <div class="span4">
       <div class="service">
+<!--
         <div class="service-icon">
           <span class="lsf-icon" title="arrowright"></span>
         </div>
+-->
         {{#markdown}}speaking.md{{/markdown}}
       </div>
     </div>
@@ -64,6 +74,7 @@
   </div>
 </section>
 
+<!--
 <section class="clear-fix" style="background:grey">
   <div class="container-fluid wrap">
     <h1>What's happening</h1>
@@ -75,12 +86,11 @@
     </div>
   </div>
 </section>
+-->
 
-<section class="clear-fix" style="background:#fd8">
+<section class="clear-fix" style="background:#888">
   <div class="container-fluid wrap" style="color: #222">
-    <h1>Get in touch!</h1>
     <div class="span6">
-      {{#markdown}}contact.md{{/markdown}}
     </div>
+  </div>
 </section>
-
