@@ -1,11 +1,7 @@
-> "Clojure is a language written by production developers, for production developers writing business systems" -- Stu Halloway
+The reason businesses are adopting Clojure is to improve the effectiveness of their software development investments.
 
-Clojure and ClojureScript offer substantial improvements in software development while retaining investment in today's existing installed computing platforms, specifically the Java Virtual Machine and the web browser.
+> "Clojure is a language written by production developers, for production developers for business systems, for systems that have hard requirements." -- Stu Halloway
 
-Rather than offer developers a multitude of language 'features', Clojure reduces the available options to those that will result in _reliable software systems_.
+The reason businesses are adopting Clojure is to improve the effectiveness of their software development investments.
 
-It is a key observation of Clojure's designers that _unreliable software arises from the extent to which a system's internal state changes are allowed to happen_. The result is unmanageable complexity, keeping software development and maintenance costs high and preventing gains from  parallelism.
-
-Clojure reflects a revolution in the way that software developers manage an application's most important asset: it's data. And Clojure's benefits are available to all, without requiring developers to adopt a particular style or discipline when programming.
-
-So systems written in Clojure are more reliable, cheaper to maintain and able to solve harder problems.
+Clojure reflects a revolution in the way that software developers manage an application's most important asset: it's data. Instead of relying on process or coding guidelines, Clojure's disciplined approach to state is baked into the development language itself.
