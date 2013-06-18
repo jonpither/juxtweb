@@ -4,4 +4,4 @@ The reason businesses are adopting Clojure is to improve the effectiveness of th
 
 The reason businesses are adopting Clojure is to improve the effectiveness of their software development investments.
 
-Clojure reflects a revolution in the way that software developers manage an application's most important asset: it's data. Instead of relying on process or coding guidelines, Clojure's disciplined approach to state is baked into the development language itself.
+Clojure represents a revolution in the way that software developers manage an application's most important asset: it's data. Instead of relying on process or coding guidelines, Clojure's disciplined approach to state is baked into the development language itself.
