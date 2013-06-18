@@ -24,7 +24,7 @@
        :plugins {[up/up-firefox-reload ~(versions :up)] {:host "nessa"}
                  [up/up-logging ~(versions :up)] nil
                  [up/up-http ~(versions :up)] {:port 8081}
-                 [up/up-nrepl ~(versions :up)] {:port 6011}
+                 [up/up-nrepl ~(versions :up)] {:port 6012}
                  [up/up-pedestal-webapp ~(versions :up)] {:handler pro.juxt.website/handler}
                  [up/up-watch ~(versions :up)] {:patterns ["resources" ["*.mustache"] ["*.md"]]}
                  [up/up-stencil ~(versions :up)] nil
