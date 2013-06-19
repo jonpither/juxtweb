@@ -7,7 +7,7 @@
 __15th/16th (Mon/Tue) July 2013 - our 2-day ['Fast-track to Clojure' training course](http://skillsmatter.com/course/scala/fast-track-to-clojure)__ - [contact us](mailto:malcolm@juxt.pro?subject=Clojure-course-enquiry) for booking details
 
 * Location: [The Skills Matter eXchange](http://skillsmatter.com/location-details/scala/2892/96), London
-* Price: £1295.00
+* Price: £1295.00 + VAT
 
 ##### Previous events
 
