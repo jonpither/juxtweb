@@ -16,7 +16,8 @@
 (defproject pro.juxt/juxtweb version
   :plugins [[lein-up ~(versions :up)]]
   :dependencies [[org.clojure/clojure "1.5.1"]
-                 [endophile "0.1.0"]]
+                 [endophile "0.1.0"]
+                 [clj-time "0.5.1"]]
 
   :source-paths ["src"]
 

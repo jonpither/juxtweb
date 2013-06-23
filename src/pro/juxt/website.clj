@@ -8,7 +8,8 @@
    [io.pedestal.service.impl.interceptor :refer (interceptor)]
    [endophile.core :refer (mp to-clj)]
    [pro.juxt.website
-    [util :refer (emit-element)]])
+    [util :refer (emit-element)]
+    [events :refer (get-events)]])
   (:import (up.start Plugin)))
 
 (defn markdown [content]
@@ -21,7 +22,8 @@
      :body (stencil/render-file "page.html"
                                 {:markdown markdown
                                  :content (fn []
-                                            (stencil/render-file "home.html" {:markdown markdown}))})}))
+                                            (stencil/render-file "home.html" {:markdown markdown
+                                                                              :events get-events}))})}))
 
 (defn ->index [req] (redirect "/index.html"))
 
