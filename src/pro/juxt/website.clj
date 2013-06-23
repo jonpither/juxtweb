@@ -7,7 +7,8 @@
    [io.pedestal.service.interceptor :refer (defhandler)]
    [io.pedestal.service.impl.interceptor :refer (interceptor)]
    [endophile.core :refer (mp to-clj)]
-   [clojure.xml :refer (emit-element)])
+   [pro.juxt.website
+    [util :refer (emit-element)]])
   (:import (up.start Plugin)))
 
 (defn markdown [content]
@@ -19,7 +20,7 @@
      :headers {"Content-Type" "text/html"}
      :body (stencil/render-file "page.html"
                                 {:markdown markdown
-                                 :content (fn [] 
+                                 :content (fn []
                                             (stencil/render-file "home.html" {:markdown markdown}))})}))
 
 (defn ->index [req] (redirect "/index.html"))
